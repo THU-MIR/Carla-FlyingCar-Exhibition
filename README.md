@@ -22,7 +22,7 @@ pip install -r requirements.txt
 * 受限于产品部署电脑的性能限制，使用UE编辑器启动Carla服务器是一件困难且低效的做法。为了更好的分发，这里通常将其构建好的场景或模型打包成二进制文件再使用。使用方式请参考 [Wiki:二进制包模式启动](https://github.com/Derkai52/Carla-FlyingCar-Exhibition/wiki/%E5%90%AF%E5%8A%A8Carla%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E4%BA%8C%E8%BF%9B%E5%88%B6%E5%8C%85%E6%A8%A1%E5%BC%8F%EF%BC%89)
 
 加载片刻后，你将看到如下画面：
-![Carla服务器启动.png](/Carla-FlyingCar-Exhibition/doc_images/carla_run.png)
+![Carla服务器启动.png](/doc_images/carla_run.png)
 
 ## 3、演示示例
 - 本项目在Carla官方示例的基础上额外提供了示例，用以在场景中生成飞行汽车交通流及一辆以第一人称视角，通过键盘操作的飞行汽车。
