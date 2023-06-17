@@ -1,5 +1,7 @@
 ## 飞行汽车场景演示
 
+![首页场景图.gif](/doc_images/intro.gif)
+
 本项目使用 Carla 0.9.14 构建，使用 UnrealEngine 4.62，使用Ubuntu20.04测试。
 
 
@@ -59,6 +61,12 @@ make package
 进入项目根目录下的 `PythonAPI/examples/`
 首先保证Carla服务器已启动，再执行：
 ```shell
-# 启动飞行汽车
+# 在场景中生成空中交通流
+python3 generate_traffic_air.py
+
+# 在场景中生成地面交通流
+python3 generate_traffic_land.py
+
+# 第一人称视角启动飞行汽车（WASD控制朝向和前进后退，方向键上下控制飞行高度）
 python3 manual_control_flycar.py
 ```
