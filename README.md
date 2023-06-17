@@ -29,9 +29,10 @@ make launch
 
 ![导入资源文件夹.png](/doc_images/load_modelfold.png)
 
-2、添加蓝图和参数，参考官方文档：[导入自定义车辆](https://carla.readthedocs.io/en/latest/tuto_A_add_vehicle/#bind-and-model-the-vehicle) 
+2、为飞行汽车添加蓝图和参数，参考 [Wiki](https://github.com/Derkai52/Carla-FlyingCar-Exhibition/wiki)
 
 其中材质渲染及动画部分本示例默认提供，也可以使用Blend或UE自行实现。
+除本示例外，可参考官方文档[导入自定义车辆](https://carla.readthedocs.io/en/latest/tuto_A_add_vehicle/#bind-and-model-the-vehicle) 
 
 ## 4、启动Carla服务器（UE编辑器模式）
 - 在场景搭建中经常需要调整，这里可以直接使用UE编辑器进行构建场景和基础功能验证。
@@ -53,11 +54,11 @@ make package
 - 注意：默认状态下 `make package` 命令为覆盖式生成，即会覆盖上一次已编译好的包，所以建议将编译好的包自行备份。
 
 ## 6、演示示例
-- 本项目在Carla官方示例的基础上额外提供了 `manual_control_display.py` 用以在场景中生成飞行汽车交通流及一辆以第一人称视角，通过键盘操作的飞行汽车。
+- 本项目在Carla官方示例的基础上额外提供了 `manual_control_flycar.py` 用以在场景中生成飞行汽车交通流及一辆以第一人称视角，通过键盘操作的飞行汽车。
 
 进入项目根目录下的 `PythonAPI/examples/`
 首先保证Carla服务器已启动，再执行：
 ```shell
 # 启动飞行汽车
-python3 manual_control_display.py --filer flyingcar
+python3 manual_control_flycar.py
 ```

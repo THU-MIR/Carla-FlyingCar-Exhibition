@@ -520,15 +520,15 @@ class KeyboardControl(object):
             world.player.set_light_state(self._lights)
 
 
-            self.vehicle_mode = "car" # TODO: 配置项设置默认启动模态
+            self.vehicle_mode = "drone" # TODO: 配置项设置默认启动模态
             self.mode_change_flag = 0
             self.first_init = True
 
             # Add DroneMode
-            parser = argparse.ArgumentParser(description='Simulation Files') # TODO： 路径修改为相对路径
-            parser.add_argument('--waypoints', default='/home/tk/Desktop/carla_project/PythonAPI/examples/multirotor/waypoints_sample.txt', type=str,
+            parser = argparse.ArgumentParser(description='Simulation Files')
+            parser.add_argument('--waypoints', default='multirotor/waypoints_sample.txt', type=str,
                             help='Takes in the required waypoint file')
-            parser.add_argument('--params', default='/home/tk/Desktop/carla_project/PythonAPI/examples/multirotor/params_sample.txt', type=str,
+            parser.add_argument('--params', default='multirotor/params_sample.txt', type=str,
                                 help='Takes in the required parameter file')
             args = parser.parse_args()
             wp_file = open(args.waypoints,"r")
@@ -1828,8 +1828,8 @@ def main():
     argparser.add_argument(
         '--filter',
         metavar='PATTERN',
-        default='vehicle.*',
-        help='actor filter (default: "vehicle.*")')
+        default='flyingcar',
+        help='actor filter (default: "flyingcar")')
     argparser.add_argument(
         '--generation',
         metavar='G',
