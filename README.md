@@ -17,17 +17,21 @@ pip install -r requirements.txt
 make launch
 ```
 加载片刻后，你将看到如下画面：
-![UE启动界面.png](/Carla-FlyingCar-Exhibition/doc_images/ue_run.png)
+![UE启动界面.png](/doc_images/ue_run.png)
 
 
 ## 3、导入飞行汽车模型及动画
 - 资源文件一共包含两个文件夹，其中 `Rotationcycle` 是有旋翼桨叶旋转动画的飞行汽车，`Spread` 是带旋翼展开动画的飞行汽车。上述文件已在 UE4.62 版本中编辑好，可以直接进行导入。
 
-复制 `Rotationcycle` 文件夹和 `Spread` 文件夹至 `carla/Unreal/CarlaUE4/Content` 目录下以正确加载资源文件。
+1、复制 `Rotationcycle` 文件夹和 `Spread` 文件夹至 `carla/Unreal/CarlaUE4/Content` 目录下以正确加载资源文件。
 
 导入成功后如下图所示，在UE编辑器中内容浏览器下可以看到上述文件夹和对应资源文件：
 
-![导入资源文件夹.png](/Carla-FlyingCar-Exhibition/doc_images/load_modelfold.png)
+![导入资源文件夹.png](/doc_images/load_modelfold.png)
+
+2、添加蓝图和参数，参考官方文档：[导入自定义车辆](https://carla.readthedocs.io/en/latest/tuto_A_add_vehicle/#bind-and-model-the-vehicle) 
+
+其中材质渲染及动画部分本示例默认提供，也可以使用Blend或UE自行实现。
 
 ## 4、启动Carla服务器（UE编辑器模式）
 - 在场景搭建中经常需要调整，这里可以直接使用UE编辑器进行构建场景和基础功能验证。
@@ -44,7 +48,7 @@ make package
 
 此时 carla 项目根目录下你可以找到新编译的二进制包，默认状态下它位于 `Dist` 文件夹下。执行 `CarlaUE4.sh` 以加载二进制包形式启动 Carla 服务器。
 
-![加载二进制包以启动Carla服务器.png](/Carla-FlyingCar-Exhibition/doc_images/load_binary_package.png)
+![加载二进制包以启动Carla服务器.png](/doc_images/load_binary_package.png)
 
 - 注意：默认状态下 `make package` 命令为覆盖式生成，即会覆盖上一次已编译好的包，所以建议将编译好的包自行备份。
 

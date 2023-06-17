@@ -502,7 +502,7 @@ def main():
         flycar_scale = 5 # TODO: 应当用更精细的数量控制
         traj_manage.generate_drone(num = flycar_scale*12)
         # flycar_blueprints = get_actor_blueprints(world, args.filterv, args.generationv)
-        flycar_blueprints = get_actor_blueprints(world, 'uav', "all")
+        flycar_blueprints = get_actor_blueprints(world, 'flyingcar', "all")
         # traj_manage.destroy() # TODO: 销毁所有车辆
 
         # TODO: 急具隐患的手动添加
